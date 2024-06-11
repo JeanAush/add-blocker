@@ -2,9 +2,7 @@ const adBlockRules = [
   {
     id: 1,
     priority: 1,
-    action: {
-      type: "block"
-    },
+    action: { type: "block" },
     condition: {
       urlFilter: "*://*/*",
       resourceTypes: [
@@ -48,7 +46,7 @@ const adBlockRules = [
 
 function updateAdBlockRules() {
   chrome.declarativeNetRequest.updateDynamicRules({
-    removeRuleIds: [1],
+    removeRuleIds: adBlockRules.map(rule => rule.id),
     addRules: adBlockRules
   });
 }
