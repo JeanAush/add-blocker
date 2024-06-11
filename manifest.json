@@ -2,12 +2,15 @@
   "manifest_version": 3,
   "name": "Ad Blocker",
   "version": "1.0",
-  "description": "A simple ad blocker for Chrome",
+  "description": "A simple ad blocker extension for Chrome built with React",
   "permissions": [
     "webRequest",
     "webRequestBlocking",
     "declarativeNetRequest",
-    "activeTab"
+    "declarativeNetRequestFeedback",
+    "activeTab",
+    "storage",
+    "scripting"
   ],
   "background": {
     "service_worker": "background.js"
