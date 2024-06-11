@@ -2,7 +2,7 @@ chrome.runtime.onInstalled.addListener(() => {
   chrome.declarativeNetRequest.updateDynamicRules({
     addRules: [
       {
-        "id": 1,
+        "id": 1, 
         "priority": 1,
         "action": {
           "type": "block"
@@ -14,6 +14,6 @@ chrome.runtime.onInstalled.addListener(() => {
         }
       }
     ],
-    removeRuleIds: []
+    removeRuleIds: [1]
   });
 });

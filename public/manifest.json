@@ -1,28 +1,16 @@
 {
   "manifest_version": 3,
   "name": "Ad Blocker",
+  "description": "A simple ad blocker built with React.",
   "version": "1.0",
-  "description": "A simple ad blocker extension for Chrome built with React",
   "permissions": [
-    "webRequest",
-    "declarativeNetRequest",
     "activeTab",
+    "declarativeNetRequest",
     "storage",
     "scripting"
   ],
   "background": {
     "service_worker": "background.js"
-  },
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "48": "icon48.png",
-      "128": "icon128.png"
-    }
-  },
-  "icons": {
-    "48": "icon48.png",
-    "128": "icon128.png"
   },
   "content_scripts": [
     {
@@ -30,13 +18,12 @@
       "js": ["content.js"]
     }
   ],
-  "declarative_net_request": {
-    "rule_resources": [
-      {
-        "id": "ruleset_1",
-        "enabled": true,
-        "path": "rules.json"
-      }
-    ]
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "icon48.png"
   }
 }
